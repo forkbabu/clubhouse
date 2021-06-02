@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:gravity="center_horizontal" android:id="@id/topics" android:paddingLeft="@dimen/common_row_horizontal_padding" android:paddingRight="@dimen/common_row_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/common_row_horizontal_padding" style="@style/TextStyle.Bold.ClubTopics"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

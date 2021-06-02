@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:id="@id/event_host_divider" android:background="@color/clubhouse_gray_wash" android:layout_marginStart="16.0dip" style="@style/Divider"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

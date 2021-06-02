@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="instabug_feature_rq_str_days_ago">
+        <item quantity="other">%d dagen geleden</item>
+        <item quantity="one">%d dag geleden</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_hours_ago">
+        <item quantity="other">%d uur geleden</item>
+        <item quantity="one">%d uur geleden</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_minutes_ago">
+        <item quantity="other">%d minuten geleden</item>
+        <item quantity="one">%d minuut geleden</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nieuwe meldingen</item>
+        <item quantity="one">%d nieuwe melding</item>
+    </plurals>
+</resources>

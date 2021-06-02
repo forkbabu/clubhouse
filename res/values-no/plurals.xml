@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="instabug_feature_rq_str_days_ago">
+        <item quantity="other">%d dager siden</item>
+        <item quantity="one">%d dag siden</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_hours_ago">
+        <item quantity="other">%d timer siden</item>
+        <item quantity="one">%d time siden</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_minutes_ago">
+        <item quantity="other">%d minutter siden</item>
+        <item quantity="one">%d minutt siden</item>
+    </plurals>
+</resources>

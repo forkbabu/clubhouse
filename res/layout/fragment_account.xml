@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:windowBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@id/back" style="@style/ClubhouseNavBackIcon" />
+        <TextView android:id="@id/toolbar_title" android:text="@string/account" style="@style/ClubhouseNavTitle" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.cardview.widget.CardView android:visibility="gone" android:layout_marginTop="@dimen/common_bottom_margin" android:layout_marginBottom="@dimen/common_bottom_margin" android:layout_marginVertical="@dimen/common_bottom_margin" style="@style/Clubhouse.CardView">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/connect_twitter" android:text="@string/connect_twitter" android:textAlignment="center" style="@style/Clubhouse.Settings.Item" />
+            <View style="@style/Divider" />
+            <TextView android:id="@id/connect_instagram" android:text="@string/connect_instagram" android:textAlignment="center" style="@style/Clubhouse.Settings.Item" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView style="@style/Clubhouse.CardView">
+        <TextView android:textColor="@color/clubhouse_red" android:id="@id/deactivate" android:text="@string/deactivate_account" android:textAlignment="center" style="@style/Clubhouse.Settings.Item" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/onboarding_graph" app:startDestination="@id/welcomeFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="WelcomeFragment" android:name="com.clubhouse.android.ui.onboarding.WelcomeFragment" android:id="@id/welcomeFragment">
+        <action android:id="@id/action_welcomeFragment_to_collectPhoneNumberFragment" app:destination="@id/collectPhoneNumberFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:label="CollectPhoneNumberFragment" android:name="com.clubhouse.android.ui.onboarding.CollectPhoneNumberFragment" android:id="@id/collectPhoneNumberFragment">
+        <action android:id="@id/action_collectPhoneNumberFragment_to_validateNumberFragment" app:destination="@id/validateNumberFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:label="ValidateNumberFragment" android:name="com.clubhouse.android.ui.onboarding.ValidateNumberFragment" android:id="@id/validateNumberFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.onboarding.ValidateNumberArgs" />
+        <action android:id="@id/action_validateNumberFragment_to_collectNameFragment" app:destination="@id/collectNameFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/collectPhoneNumberFragment" />
+        <action android:id="@id/action_validateNumberFragment_to_connectTwitterFragment" app:destination="@id/connectTwitterFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/collectPhoneNumberFragment" />
+        <action android:id="@id/action_validateNumberFragment_to_waitlistFragment" app:destination="@id/waitlistFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/collectPhoneNumberFragment" />
+        <action android:id="@id/action_validateNumberFragment_to_main_graph" app:destination="@id/main_graph" app:popUpTo="@id/welcomeFragment" app:popUpToInclusive="true">
+            <argument android:name="fromOnboarding" android:defaultValue="true" app:argType="boolean" />
+        </action>
+    </fragment>
+    <fragment android:label="ConnectTwitterFragment" android:name="com.clubhouse.android.ui.onboarding.ConnectTwitterFragment" android:id="@id/connectTwitterFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.onboarding.ConnectTwitterFragment$BundleInfo" />
+        <action android:id="@id/action_connectTwitterFragment_to_collectNameFragment" app:destination="@id/collectNameFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.CollectNameFragment" android:id="@id/collectNameFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.onboarding.WaitlistInfoArgs" />
+        <action android:id="@id/action_collectNameFragment_to_collectUsernameFragment" app:destination="@id/collectUsernameFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.CollectUsernameFragment" android:id="@id/collectUsernameFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.onboarding.WaitlistInfoArgs" />
+        <action android:id="@id/action_collectUsernameFragment_to_addPhotoFragment" app:destination="@id/addPhotoFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+        <action android:id="@id/action_collectUsernameFragment_to_waitlistFragment" app:destination="@id/waitlistFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/collectPhoneNumberFragment" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.AddPhotoFragment" android:id="@id/addPhotoFragment">
+        <deepLink app:uri="clubhouse://onboarding" />
+        <action android:id="@id/action_addPhotoFragment_to_collectTopicsFragment" app:destination="@id/collectTopicsFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.CollectTopicsFragment" android:id="@id/collectTopicsFragment">
+        <action android:id="@id/action_collectTopicsFragment_to_contactsPermissionFragment" app:destination="@id/contactsPermissionFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+        <action android:id="@id/action_collectTopicsFragment_to_followSuggestionsFragment" app:destination="@id/followSuggestionsFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.ContactsPermissionFragment" android:id="@id/contactsPermissionFragment">
+        <action android:id="@id/action_contactsPermissionFragment_to_followSuggestionsFragment" app:destination="@id/followSuggestionsFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.FollowSuggestionsFragment" android:id="@id/followSuggestionsFragment">
+        <action android:id="@id/action_followSuggestionsFragment_to_welcomeRoomFragment" app:destination="@id/welcomeRoomFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.WelcomeRoomFragment" android:id="@id/welcomeRoomFragment">
+        <action android:id="@id/action_welcomeRoomFragment_to_main_graph" app:destination="@id/main_graph" app:popUpTo="@id/welcomeFragment" app:popUpToInclusive="true">
+            <argument android:name="fromOnboarding" android:defaultValue="true" app:argType="boolean" />
+            <argument android:name="welcomeChannelId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.onboarding.WaitlistFragment" android:id="@id/waitlistFragment">
+        <deepLink app:uri="clubhouse://waitlist" />
+        <action android:id="@id/action_waitlistFragment_to_collectPhoneNumberFragment" app:destination="@id/collectPhoneNumberFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/collectPhoneNumberFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_waitlistFragment_to_connectTwitterFragment" app:destination="@id/connectTwitterFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/waitlistFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_waitlistFragment_to_addPhotoFragment" app:destination="@id/addPhotoFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/waitlistFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_waitlistFragment_to_collectNameFragment" app:destination="@id/collectNameFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/waitlistFragment" app:popUpToInclusive="true" />
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.onboarding.WaitlistArgs" />
+        <argument android:name="username" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+</navigation>

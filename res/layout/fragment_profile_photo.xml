@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?android:windowBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/close" android:padding="@dimen/common_touchable_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_vertical_margin" android:src="@drawable/ic_close" android:contentDescription="@string/cd_close" android:layout_marginEnd="@dimen/common_touchable_padding" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/black" />
+    <com.clubhouse.android.shared.ui.AvatarView android:id="@id/avatar" android:layout_width="320.0dip" android:layout_height="320.0dip" android:contentDescription="@string/profile_photo" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

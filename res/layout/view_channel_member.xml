@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:drawableRight="@drawable/ic_speaker_white" android:drawablePadding="@dimen/hallway_speaker_icon_padding" style="@style/TextStyle.Hallway.Name"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

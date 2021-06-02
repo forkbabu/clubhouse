@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?android:windowBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:paddingTop="@dimen/common_big_touchable_padding" android:paddingBottom="@dimen/common_touchable_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ClubhouseNavToolbar">
+        <TextView android:id="@id/cancel" android:text="@string/cancel" style="@style/ClubhouseNavLeftTextStyle" />
+        <TextView android:id="@id/toolbar_title" android:text="@string/club_rules" style="@style/ClubhouseNavTitle" />
+        <TextView android:textColor="@color/clubhouse_green_color" android:id="@id/save" android:text="@string/save" style="@style/ClubhouseNavRightTextStyle" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constrainedHeight="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/common_touchable_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/club_rules_header" android:paddingTop="@dimen/common_touchable_padding" android:paddingBottom="@dimen/common_touchable_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_half_margin" android:layout_marginRight="@dimen/common_horizontal_half_margin" android:text="@string/club_rules_message" android:layout_marginHorizontal="@dimen/common_horizontal_half_margin" android:paddingVertical="@dimen/common_touchable_padding" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TextStyle.Medium.Banner" />
+            <include android:id="@id/club_rule_one" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_touchable_padding" layout="@layout/club_rule_title_description" />
+            <include android:id="@id/club_rule_two" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_touchable_padding" layout="@layout/club_rule_title_description" />
+            <include android:id="@id/club_rule_three" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_touchable_padding" layout="@layout/club_rule_title_description" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

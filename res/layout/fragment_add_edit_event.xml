@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/clubhouse_eggshell" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ClubhouseNavToolbar">
+        <TextView android:id="@id/cancel" android:text="@string/cancel" style="@style/ClubhouseNavLeftTextStyle" />
+        <TextView android:id="@id/toolbar_title" android:text="@string/new_event" style="@style/ClubhouseNavTitle" />
+        <TextView android:textColor="@color/clubhouse_green_color" android:id="@id/publish" android:text="@string/publish" style="@style/ClubhouseNavRightTextStyle" />
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView android:id="@id/scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <androidx.cardview.widget.CardView android:id="@id/base_event_info" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Clubhouse.CardView">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:id="@id/event_name" android:hint="@string/event_name" android:maxLength="@integer/max_event_name_length" android:inputType="textCapSentences" style="@style/Clubhouse.Create.Row.TextStyle" />
+                    <View style="@style/Divider" />
+                    <com.airbnb.epoxy.EpoxyRecyclerView android:id="@id/co_hosts_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <View style="@style/Divider" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/add_a_co_host" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/common_row_horizontal_padding">
+                        <TextView android:id="@id/add_a_co_host_title" android:text="@string/add_a_co_host_or_guest" android:layout_weight="1.0" style="@style/Clubhouse.Create.Row.TextStyle" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_forward" app:tint="@color/clubhouse_gray" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@id/date_time_info" android:layout_marginTop="@dimen/create_event_sections_top_margin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/base_event_info" style="@style/Clubhouse.CardView">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/event_date_label" android:background="?selectableItemBackground" android:clickable="true" android:text="@string/date" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Clubhouse.Create.Row.TextStyle" />
+                    <TextView android:textColor="@color/clubhouse_eggshell_dark" android:id="@id/event_date" android:layout_width="wrap_content" app:layout_constraintBottom_toBottomOf="@id/event_date_label" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/event_date_label" style="@style/Clubhouse.Create.Row.TextStyle" />
+                    <View android:id="@id/event_date_picker_divider" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_date" style="@style/Divider" />
+                    <CalendarView android:id="@id/event_date_picker" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:showWeekNumber="false" android:shownWeekCount="5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_date_picker_divider" />
+                    <View android:id="@id/event_time_divider" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_date_picker" style="@style/Divider" />
+                    <TextView android:id="@id/event_time_label" android:background="?selectableItemBackground" android:clickable="true" android:text="@string/time" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_time_divider" style="@style/Clubhouse.Create.Row.TextStyle" />
+                    <TextView android:textColor="@color/clubhouse_eggshell_dark" android:id="@id/event_time" android:layout_width="wrap_content" app:layout_constraintBottom_toBottomOf="@id/event_time_label" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/event_time_label" style="@style/Clubhouse.Create.Row.TextStyle" />
+                    <View android:id="@id/event_time_picker_divider" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_time_label" style="@style/Divider" />
+                    <TimePicker android:id="@id/event_time_picker" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:timePickerMode="spinner" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_time_picker_divider" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@id/host_club_event_info" android:visibility="gone" android:layout_marginTop="@dimen/create_event_sections_top_margin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/date_time_info" style="@style/Clubhouse.CardView">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/host_club_root" android:background="?selectableItemBackground" android:focusable="true" android:clickable="true" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/common_row_horizontal_padding">
+                        <TextView android:id="@id/host_club_title" android:layout_width="wrap_content" android:text="@string/host_club" style="@style/Clubhouse.Create.Row.TextStyle" />
+                        <TextView android:ellipsize="end" android:gravity="end|center" android:id="@id/host_club_name" android:text="@string/none" android:lines="1" android:layout_weight="1.0" android:alpha="0.5" android:paddingStart="0.0dip" android:paddingEnd="6.0dip" style="@style/Clubhouse.Create.Row.TextStyle" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_forward" app:tint="@color/clubhouse_gray" />
+                    </LinearLayout>
+                    <View android:id="@id/open_to_members_divider" android:visibility="gone" style="@style/Divider" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/open_to_members_root" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/common_row_horizontal_padding">
+                        <TextView android:id="@id/open_to_members_title" android:text="@string/open_to_members_only" android:layout_weight="1.0" style="@style/Clubhouse.Create.Row.TextStyle" />
+                        <androidx.appcompat.widget.SwitchCompat android:theme="@style/Clubhouse.CreateEvent.Switch" android:id="@id/open_to_members_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@id/description_event_info" android:layout_marginTop="@dimen/create_event_sections_top_margin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/host_club_event_info" style="@style/Clubhouse.CardView">
+                <EditText android:id="@id/event_description" android:paddingTop="@dimen/create_description_vertical_padding" android:paddingBottom="@dimen/create_description_vertical_padding" android:layout_width="fill_parent" android:layout_height="@dimen/create_description_height" android:hint="@string/description" android:paddingVertical="@dimen/create_description_vertical_padding" style="@style/Clubhouse.CardView.EditText" />
+            </androidx.cardview.widget.CardView>
+            <TextView android:id="@id/event_description_remaining" android:paddingLeft="@dimen/common_row_horizontal_padding" android:paddingRight="@dimen/common_row_horizontal_padding" android:paddingBottom="@dimen/common_vertical_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_row_horizontal_padding" android:layout_marginTop="@dimen/create_event_description_remaining_top_margin" android:layout_marginRight="@dimen/common_row_horizontal_padding" android:layout_marginHorizontal="@dimen/common_row_horizontal_padding" android:paddingHorizontal="@dimen/common_row_horizontal_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/description_event_info" style="@style/Clubhouse.Common.GrayInfo" />
+            <Button android:id="@id/event_delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/common_flat_button_medium_height" android:layout_marginLeft="@dimen/common_row_horizontal_padding" android:layout_marginTop="@dimen/common_touchable_padding" android:layout_marginRight="@dimen/common_row_horizontal_padding" android:text="@string/delete_event" android:layout_marginHorizontal="@dimen/common_row_horizontal_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/event_description_remaining" style="@style/Clubhouse.Button.Flat.WhiteRedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

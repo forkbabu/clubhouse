@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/pill_root" android:padding="@dimen/common_touchable_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_touchable_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/pill" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="@color/clubhouse_eggshell_shade" app:cardCornerRadius="@dimen/common_button_corner_radius" app:cardElevation="0.0dip">
+        <TextView android:layout_gravity="center" android:paddingLeft="@dimen/common_touchable_padding" android:paddingTop="@dimen/common_pill_padding" android:paddingRight="@dimen/common_touchable_padding" android:paddingBottom="@dimen/common_pill_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/explore" android:includeFontPadding="false" android:contentDescription="@string/cd_explore_pill" android:paddingHorizontal="@dimen/common_touchable_padding" android:paddingVertical="@dimen/common_pill_padding" style="@style/TextStyle.Medium" />
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="instabug_feature_rq_str_days_ago">
+        <item quantity="other">Před %d dny</item>
+        <item quantity="one">Před %d dnem</item>
+        <item quantity="few">Před %d dny</item>
+        <item quantity="many">Před %d dny</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_hours_ago">
+        <item quantity="other">Před %d hodinami</item>
+        <item quantity="one">Před %d hodinou</item>
+        <item quantity="few">Před %d hodinami</item>
+        <item quantity="many">Před %d hodinami</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_minutes_ago">
+        <item quantity="other">Před %d minutami</item>
+        <item quantity="one">Před %d minutou</item>
+        <item quantity="few">Před %d minutami</item>
+        <item quantity="many">Před %d minutami</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nových oznámení</item>
+        <item quantity="one">%d nové oznámení</item>
+        <item quantity="few">%d nová oznámení</item>
+        <item quantity="many">%d nového oznámení</item>
+    </plurals>
+</resources>

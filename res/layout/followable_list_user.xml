@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="@dimen/list_item_spacing" android:paddingRight="@dimen/list_item_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/list_item_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/user" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/follow_button" app:layout_constraintStart_toStartOf="parent" layout="@layout/list_user_anatomy" />
+    <com.clubhouse.android.core.ui.TriStateButton android:id="@id/follow_button" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Clubhouse.Button.Follow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

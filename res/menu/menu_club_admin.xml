@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/edit_topics" android:title="@string/edit_club_topics" />
+    <item android:id="@id/edit_rules" android:title="@string/edit_club_rules" />
+    <item android:id="@id/follower_setting" android:title="@string/dont_allow_followers" />
+    <item android:id="@id/members_start_rooms_setting" android:title="@string/let_members_start_rooms" />
+    <item android:id="@id/member_list_setting" android:title="@string/hide_member_list" />
+    <item android:id="@id/edit_description" android:title="@string/edit_description" />
+    <item android:id="@id/leave_club" android:title="@string/leave_club" />
+</menu>

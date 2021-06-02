@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/share" android:title="@string/share_profile" />
+    <item android:id="@id/block" android:title="@string/block" />
+    <item android:id="@id/unblock" android:visible="false" android:title="@string/unblock" />
+    <item android:id="@id/remove" android:visible="false" android:title="@string/remove_from_room" />
+    <item android:id="@id/remove_and_report" android:visible="false" android:title="@string/remove_and_report" />
+    <item android:id="@id/report_incident" android:visible="false" android:title="@string/report_an_incident" />
+</menu>

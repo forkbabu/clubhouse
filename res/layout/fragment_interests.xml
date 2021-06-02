@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?android:windowBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@id/back" style="@style/ClubhouseNavBackIcon" />
+        <TextView android:id="@id/toolbar_title" android:text="@string/interests" style="@style/ClubhouseNavTitle" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView android:orientation="vertical" android:id="@id/topics_list_container" android:paddingBottom="44.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_topics_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </androidx.core.widget.NestedScrollView>
+    <View android:id="@id/bottom_shadow" android:background="@drawable/list_bottom_shadow" android:layout_width="fill_parent" android:layout_height="96.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <ProgressBar android:gravity="center" android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

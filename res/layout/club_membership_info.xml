@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/admin_follower_member_tab_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout android:id="@id/member_follower_tabs" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Clubhouse.TabLayout" />
+    <TextView android:id="@id/member_privacy_subheader" android:paddingTop="@dimen/common_touchable_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/member_follower_tabs" />
+</androidx.constraintlayout.widget.ConstraintLayout>

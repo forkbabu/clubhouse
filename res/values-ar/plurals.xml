@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="instabug_feature_rq_str_days_ago">
+        <item quantity="other">منذ %d يوم</item>
+        <item quantity="zero">منذ %d أيام</item>
+        <item quantity="one">منذ يوم</item>
+        <item quantity="two">منذ يومين</item>
+        <item quantity="few">منذ %d أيام</item>
+        <item quantity="many">منذ %d يوم</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_hours_ago">
+        <item quantity="other">منذ %d ساعة</item>
+        <item quantity="zero">منذ %d ساعات</item>
+        <item quantity="one">منذ ساعة</item>
+        <item quantity="two">منذ ساعتين</item>
+        <item quantity="few">منذ %d ساعات</item>
+        <item quantity="many">منذ %d ساعة</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_minutes_ago">
+        <item quantity="other">منذ %d دقيقة</item>
+        <item quantity="zero">منذ %d دقائق</item>
+        <item quantity="one">منذ دقيقة</item>
+        <item quantity="two">منذ دقيقتين</item>
+        <item quantity="few">منذ %d دقائق</item>
+        <item quantity="many">منذ %d دقيقة</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d إشعار جديد</item>
+        <item quantity="zero">%d إشعار جديد</item>
+        <item quantity="one">إشعار جديد واحد (%d)</item>
+        <item quantity="two">إشعاران جديدان (%d)</item>
+        <item quantity="few">%d إشعارات جديدة</item>
+        <item quantity="many">%d إشعارًا جديدًا</item>
+    </plurals>
+</resources>

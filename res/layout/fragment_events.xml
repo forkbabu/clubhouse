@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@id/back" style="@style/ClubhouseNavBackIcon" />
+        <TextView android:id="@id/toolbar_title" android:text="@string/upcoming_for_you" android:drawablePadding="@dimen/events_toolbar_title_arrow_padding" android:drawableEnd="@drawable/ic_arrow_down" style="@style/ClubhouseNavTitle" />
+        <ImageView android:layout_gravity="end" android:id="@id/add_edit_event" android:src="@drawable/ic_add_calendar" style="@style/ClubhouseNavIcon" />
+    </androidx.appcompat.widget.Toolbar>
+    <TextView android:gravity="center" android:id="@id/empty_view" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_large_margin" android:layout_marginRight="@dimen/common_large_margin" android:text="@string/there_are_no_upcoming_events" android:layout_marginHorizontal="@dimen/common_large_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" style="@style/TextStyle.Medium.EmptyState" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/refresh" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" app:swipeRefreshLayoutProgressSpinnerBackgroundColor="@color/clubhouse_eggshell">
+        <com.airbnb.epoxy.EpoxyRecyclerView android:id="@id/events_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

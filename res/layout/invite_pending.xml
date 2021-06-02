@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/common_vertical_margin" android:paddingBottom="@dimen/common_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="@dimen/common_vertical_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button android:layout_gravity="center_horizontal" android:id="@id/pending_invites_button" android:text="@string/see_pending_invites" style="@style/Clubhouse.Button.Rounded.Small.EggShell" />
+</FrameLayout>

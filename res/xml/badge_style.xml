@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<badge app:backgroundColor="#ffe24c51" app:horizontalOffset="@dimen/badge_horizontal_offset" app:verticalOffset="@dimen/badge_vertical_offset" style="@style/Widget.MaterialComponents.Badge" xmlns:app="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_sheet_nav_bar_color">@color/white</color>
+    <color name="nav_bar_color">@android:color/transparent</color>
+    <color name="nav_bar_color_solid">@color/clubhouse_eggshell</color>
+</resources>

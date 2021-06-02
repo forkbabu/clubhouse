@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/user_grid_horizontal_margin" android:paddingTop="@dimen/user_grid_top_margin" android:paddingRight="@dimen/user_grid_horizontal_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/user_grid_horizontal_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/TextStyle.Bold.Body" />
+        <Button android:id="@id/action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Clubhouse.Button.Borderless.Small" />
+    </LinearLayout>
+    <EditText android:id="@id/search" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/user_grid_search_spacing" android:layout_marginBottom="@dimen/user_grid_search_spacing" android:hint="@string/cd_search" android:layout_marginVertical="@dimen/user_grid_search_spacing" style="@style/Clubhouse.SearchField" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/user_grid_search_spacing" android:minHeight="250.0dip">
+        <com.airbnb.epoxy.EpoxyRecyclerView android:id="@id/user_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="250.0dip" />
+        <TextView android:gravity="center_horizontal" android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/TextStyle.Body" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

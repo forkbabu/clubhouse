@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clubhouse.android.shared.ui.AvatarView android:id="@id/avatar" android:layout_width="@dimen/avatar_size_profile_small" android:layout_height="@dimen/avatar_size_profile_small" android:layout_marginTop="@dimen/common_touchable_padding" android:layout_marginBottom="@dimen/common_touchable_padding" android:layout_marginVertical="@dimen/common_touchable_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

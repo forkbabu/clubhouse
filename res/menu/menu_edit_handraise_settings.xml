@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/handraise_options" android:checkableBehavior="single">
+        <item android:id="@id/handraise_menu_off" android:title="@string/raised_hands_off" />
+        <item android:id="@id/handraise_menu_followed_by_speakers" android:title="@string/raised_hands_followed_by_speakers" />
+        <item android:id="@id/handraise_menu_club" android:visible="false" android:title="@string/raised_hands_club" />
+        <item android:id="@id/handraise_menu_all" android:title="@string/raised_hands_open" />
+    </group>
+</menu>

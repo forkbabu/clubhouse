@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clubhouse.android.shared.ui.AvatarView android:id="@id/avatar" android:layout_width="@dimen/events_user_avatar_size" android:layout_height="@dimen/events_user_avatar_size" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

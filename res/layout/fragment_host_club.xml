@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingBottom="58.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@id/back" style="@style/ClubhouseNavBackIcon" />
+        <TextView android:id="@id/toolbar_title" android:text="@string/host_club" style="@style/ClubhouseNavTitle" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:orientation="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.cardview.widget.CardView android:id="@id/hosts_club_list_root" android:layout_marginBottom="16.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" style="@style/Clubhouse.CardView">
+            <com.airbnb.epoxy.EpoxyRecyclerView android:id="@id/hosts_club_list" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        </androidx.cardview.widget.CardView>
+        <TextView android:gravity="start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_primary_action_button_horizontal_padding" android:layout_marginRight="@dimen/common_primary_action_button_horizontal_padding" android:text="@string/the_host_club_will_appear" android:layout_marginHorizontal="@dimen/common_primary_action_button_horizontal_padding" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/hosts_club_list_root" style="@style/Clubhouse.Common.GrayInfo" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

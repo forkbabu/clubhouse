@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/main_graph"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="SplashFragment" android:name="com.clubhouse.android.ui.splash.SplashFragment" android:id="@id/splashFragment">
+        <argument android:name="fromOnboarding" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="welcomeChannelId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <action android:id="@id/action_splashFragment_to_onboarding_graph" app:destination="@id/onboarding_graph" app:popUpTo="@id/splashFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_splashFragment_to_hallway_fragment" app:destination="@id/hallwayFragment" app:popUpTo="@id/splashFragment" app:popUpToInclusive="true" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/app" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/app" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/app" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/app" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/app" />
+        <deepLink android:autoVerify="true" app:uri="join.club/app" />
+    </fragment>
+    <fragment android:label="HallwayFragment" android:name="com.clubhouse.android.ui.hallway.HallwayFragment" android:id="@id/hallwayFragment">
+        <argument android:name="channelId" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="sourceLocation" android:defaultValue="15" app:argType="integer" />
+        <action android:id="@id/action_hallwayFragment_to_createChannelFragment" app:destination="@id/createChannelDialog" />
+        <action android:id="@id/action_hallwayFragment_to_profileFragment" app:destination="@id/profileFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <action android:id="@id/action_hallwayFragment_to_invitesFragment" app:destination="@id/invitesFragment" />
+        <action android:id="@id/action_hallwayFragment_to_eventsFragment" app:destination="@id/eventsFragment" />
+        <action android:id="@id/action_hallwayFragment_to_collectTopicsFragment" app:destination="@id/collectTopicsFragment" />
+        <action android:id="@id/action_hallwayFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+        <action android:id="@id/action_hallwayFragment_to_exploreFragment" app:destination="@id/exploreFragment" />
+        <action android:id="@id/action_hallwayFragment_to_activityFragment" app:destination="@id/activityFragment" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/room/{channelId}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/room/{channelId}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/room/{channelId}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/room/{channelId}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/room/{channelId}" />
+        <deepLink android:autoVerify="true" app:uri="join.club/room/{channelId}" />
+    </fragment>
+    <dialog android:label="CreateChannelFragment" android:name="com.clubhouse.android.ui.creation.CreateChannelFragment" android:id="@id/createChannelDialog" />
+    <fragment android:name="com.clubhouse.android.ui.activity.ActivityFragment" android:id="@id/activityFragment">
+        <action android:id="@id/action_activityFragment_to_clubFragment" app:destination="@id/clubFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <action android:id="@id/action_activityFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_activityFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+        <action android:id="@id/action_activityFragment_to_hallwayFragment" app:destination="@id/hallwayFragment" />
+        <action android:id="@id/action_activityFragment_to_activityOverflowFragment" app:destination="@id/activityOverflowFragment" />
+        <action android:id="@id/action_activityFragment_to_followListFragment" app:destination="@id/followListFragment" />
+        <action android:id="@id/action_activityFragment_to_invitesFragment" app:destination="@id/invitesFragment" />
+        <action android:id="@id/action_activityFragment_to_halfClubRulesDialog" app:destination="@id/halfClubRulesDialog" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.activity.overflow.ActivityOverflowFragment" android:id="@id/activityOverflowFragment">
+        <action android:id="@id/action_activityOverflowFragment_to_profileFragment" app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.profile.ProfileFragment" android:id="@id/profileFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.ProfileArgs" />
+        <argument android:name="username" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <action android:id="@id/action_profileFragment_to_clubFragment" app:destination="@id/clubFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <action android:id="@id/action_profileFragment_to_settingsFragment" app:destination="@id/settingsFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_profileFragment_to_followListFragment" app:destination="@id/followListFragment" />
+        <action android:id="@id/action_profileFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_profileFragment_to_editBioFragment" app:destination="@id/editBioDialog" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_profileFragment_to_editPhotoFragment" app:destination="@id/editPhotoDialog" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_profileFragment_to_profilePhotoDialog" app:destination="@id/profilePhotoDialog" />
+        <action android:id="@id/action_profileFragment_to_reportProfileFragment" app:destination="@id/reportProfileFragment" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_profileFragment_to_createClubFragment" app:destination="@id/createClubFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_profileFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/username/{username}" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/@{username}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/username/{username}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/@{username}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/username/{username}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/@{username}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/username/{username}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/@{username}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/username/{username}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/@{username}" />
+        <deepLink android:autoVerify="true" app:uri="join.club/username/{username}" />
+        <deepLink android:autoVerify="true" app:uri="join.club/@{username}" />
+    </fragment>
+    <dialog android:name="com.clubhouse.android.ui.profile.WrappedBottomSheetFragment" android:id="@id/profilePhotoDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.WrappedBottomSheetArgs" />
+    </dialog>
+    <dialog android:name="com.clubhouse.android.ui.profile.EditBioFragment" android:id="@id/editBioDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.EditBioArgs" />
+    </dialog>
+    <dialog android:name="com.clubhouse.android.ui.profile.WrappedBottomSheetFragment" android:id="@id/editPhotoDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.WrappedBottomSheetArgs" />
+    </dialog>
+    <fragment android:name="com.clubhouse.android.ui.profile.FollowListFragment" android:id="@id/followListFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.FollowListArgs" />
+        <action android:id="@id/action_followListFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_followListFragment_to_clubFragment" app:destination="@id/clubFragment" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.profile.settings.SettingsFragment" android:id="@id/settingsFragment">
+        <action android:id="@id/action_settingsFragment_to_editTopicsFragment" app:destination="@id/editTopicsFragment" />
+        <action android:id="@id/action_settingsFragment_to_accountFragment" app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.profile.settings.EditTopicsFragment" android:id="@id/editTopicsFragment" />
+    <fragment android:name="com.clubhouse.android.ui.profile.settings.AccountFragment" android:id="@id/accountFragment">
+        <action android:id="@id/action_accountFragment_to_deactivateFragment" app:destination="@id/deactivateFragment" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.profile.settings.DeactivateFragment" android:id="@id/deactivateFragment" />
+    <fragment android:label="ClubFragment" android:name="com.clubhouse.android.ui.clubs.ClubFragment" android:id="@id/clubFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.ClubArgs" />
+        <action android:id="@id/action_clubFragment_to_halfClubRulesDialog" app:destination="@id/halfClubRulesDialog" />
+        <action android:id="@id/action_clubFragment_to_halfWelcomeNewClubDialog" app:destination="@id/halfWelcomeNewClubDialog" />
+        <action android:id="@id/action_clubFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_clubFragment_to_profilePhotoDialog" app:destination="@id/profilePhotoDialog" />
+        <action android:id="@id/action_clubFragment_to_growClubFragment" app:destination="@id/growClubFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <action android:id="@id/action_clubFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+        <action android:id="@id/action_clubFragment_to_editClubRulesFragment" app:destination="@id/editClubRulesFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <action android:id="@id/action_clubFragment_to_editClubDescriptionDialog" app:destination="@id/editClubDescriptionDialog" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_clubFragment_to_addEditEventFragment" app:destination="@id/addEditEventFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_clubFragment_to_clubTopicsFragment" app:destination="@id/clubTopicsFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/club/{slug}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/club/{slug}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/club/{slug}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/club/{slug}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/club/{slug}" />
+        <deepLink android:autoVerify="true" app:uri="join.club/club/{slug}" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/join/{slug}/{inviteCode}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/join/{slug}/{inviteCode}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/join/{slug}/{inviteCode}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/join/{slug}/{inviteCode}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/join/{slug}/{inviteCode}" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.clubs.rules.EditClubRulesFragment" android:id="@id/editClubRulesFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.rules.EditClubRulesArgs" />
+    </fragment>
+    <dialog android:name="com.clubhouse.android.ui.clubs.description.EditClubDescriptionFragment" android:id="@id/editClubDescriptionDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.description.EditClubDescriptionArgs" />
+    </dialog>
+    <fragment android:name="com.clubhouse.android.ui.clubs.invites.GrowClubFragment" android:id="@id/growClubFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.invites.GrowClubArgs" />
+        <action android:id="@id/action_growClubFragment_to_profileFragment" app:destination="@id/profileFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.clubs.create.CreateClubFragment" android:id="@id/createClubFragment">
+        <action android:id="@id/action_createClubFragment_to_growClubFragment" app:destination="@id/growClubFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/slide_out_left" app:popUpTo="@id/createClubFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_createClubfragment_to_clubTopicsFragment" app:destination="@id/clubTopicsFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.clubs.create.topics.ClubTopicsFragment" android:id="@id/clubTopicsFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.create.topics.ClubTopicsArgs" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.profile.reports.ReportProfileFragment" android:id="@id/reportProfileFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.reports.ReportProfileArgs" />
+    </fragment>
+    <dialog android:name="com.clubhouse.android.ui.clubs.HalfClubRulesFragment" android:id="@id/halfClubRulesDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.HalfClubRulesArgs" />
+    </dialog>
+    <dialog android:name="com.clubhouse.android.ui.clubs.HalfWelcomeNewClubFragment" android:id="@id/halfWelcomeNewClubDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.clubs.HalfWelcomeNewClubArgs" />
+        <action android:id="@id/action_halfWelcomeNewClubDialog_to_addEditEventFragment" app:destination="@id/addEditEventFragment" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" app:popUpTo="@id/splashFragment" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.clubhouse.android.ui.actionsheet.ActionSheetFragment" android:id="@id/actionSheetDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.actionsheet.ActionSheetConfig" />
+    </dialog>
+    <fragment android:label="EventsFragment" android:name="com.clubhouse.android.ui.events.EventsFragment" android:id="@id/eventsFragment">
+        <action android:id="@id/action_eventsFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_eventsFragment_to_clubFragment" app:destination="@id/clubFragment" />
+        <action android:id="@id/action_eventsFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+        <action android:id="@id/action_eventsFragment_to_addEditEventFragment" app:destination="@id/addEditEventFragment" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/event/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/event/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/event/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/event/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/event/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="join.club/event/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="www.joinclubhouse.com/join/{clubSlug}/{inviteCode}/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="joinclubhouse.com/join/{clubSlug}/{inviteCode}/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="ios.joinclubhouse.com/join/{clubSlug}/{inviteCode}/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="www.clubhouse.com/join/{clubSlug}/{inviteCode}/{eventHashId}" />
+        <deepLink android:autoVerify="true" app:uri="clubhouse.com/join/{clubSlug}/{inviteCode}/{eventHashId}" />
+    </fragment>
+    <dialog android:name="com.clubhouse.android.ui.events.HalfEventFragment" android:id="@id/halfEventDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.events.HalfEventArgs" />
+        <action android:id="@id/action_halfEventDialog_to_profileFragment" app:destination="@id/profileFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfEventDialog_to_clubFragment" app:destination="@id/clubFragment" />
+        <action android:id="@id/action_halfeventDialog_to_clubRulesDialog" app:destination="@id/halfClubRulesDialog" />
+        <action android:id="@id/action_halfEventFragment_to_addEditEventFragment" app:destination="@id/addEditEventFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+    </dialog>
+    <fragment android:label="AddEditEventFragment" android:name="com.clubhouse.android.ui.events.creation.AddEditEventFragment" android:id="@id/addEditEventFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.events.creation.AddEditEventArgs" />
+        <action android:id="@id/action_addEditEventFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+        <action android:id="@id/action_addEditEventFragment_to_chooseUsersFragment" app:destination="@id/chooseUsersDialog" />
+    </fragment>
+    <dialog android:label="ChooseUsersFragment" android:name="com.clubhouse.android.ui.creation.ChooseUsersFragment" android:id="@id/chooseUsersDialog">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.creation.ChooseUsersArgs" />
+    </dialog>
+    <fragment android:name="com.clubhouse.android.ui.search.ExploreFragment" android:id="@id/exploreFragment">
+        <action android:id="@id/action_exploreFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_exploreFragment_to_clubFragment" app:destination="@id/clubFragment" />
+    </fragment>
+    <fragment android:label="InvitesFragment" android:name="com.clubhouse.android.ui.invites.InvitesFragment" android:id="@id/invitesFragment">
+        <action android:id="@id/action_invitesFragment_to_pendingInvitesFragment" app:destination="@id/pendingInvitesFragment" />
+    </fragment>
+    <fragment android:label="PendingInvitesFragment" android:name="com.clubhouse.android.ui.invites.PendingInvitesFragment" android:id="@id/pendingInvitesFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.invites.PendingInvitesArgs" />
+    </fragment>
+    <fragment android:name="com.clubhouse.android.ui.profile.HalfProfileFragment" android:id="@id/halfProfileFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.profile.HalfProfileArgs" />
+        <action android:id="@id/action_halfProfileFragment_to_clubFragment" app:destination="@id/clubFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right" />
+        <action android:id="@id/action_halfProfileFragment_to_settingsFragment" app:destination="@id/settingsFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfprofileFragment_to_followListFragment" app:destination="@id/followListFragment" />
+        <action android:id="@id/action_halfprofileFragment_to_profileFragment" app:destination="@id/profileFragment" />
+        <action android:id="@id/action_halfprofileFragment_to_editBioDialog" app:destination="@id/editBioDialog" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfprofileFragment_to_reportProfileFragment" app:destination="@id/reportProfileFragment" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfprofileFragment_to_editPhotoFragment" app:destination="@id/editPhotoDialog" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfprofileFragment_to_profilePhotoDialog" app:destination="@id/profilePhotoDialog" app:enterAnim="@anim/slide_up" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfprofileFragment_to_createClubFragment" app:destination="@id/createClubFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_down" />
+        <action android:id="@id/action_halfprofileFragment_to_halfEventDialog" app:destination="@id/halfEventDialog" />
+    </fragment>
+    <include app:graph="@navigation/onboarding_graph" />
+</navigation>

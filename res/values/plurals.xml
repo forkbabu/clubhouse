@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="blocked_speakers">
+        <item quantity="other">People you have blocked are speakers</item>
+        <item quantity="one">Someone you have blocked is a speaker</item>
+    </plurals>
+    <plurals name="blocked_users">
+        <item quantity="other">People you have blocked are in the room</item>
+        <item quantity="one">Someone you have blocked is in the room</item>
+    </plurals>
+    <plurals name="cd_raised_hands_count">
+        <item quantity="other">Raised hands list, %d hands are raised</item>
+        <item quantity="one">Raised hands list, %d hand is raised</item>
+    </plurals>
+    <plurals name="characters_over_limit">
+        <item quantity="other">%d characters over limit</item>
+        <item quantity="one">%d character over limit</item>
+    </plurals>
+    <plurals name="characters_remaining">
+        <item quantity="other">%d characters remaining</item>
+        <item quantity="one">%d character remaining</item>
+    </plurals>
+    <plurals name="follow_overflow">
+        <item quantity="other">and %s others</item>
+        <item quantity="one">and %s other</item>
+    </plurals>
+    <plurals name="followers_label">
+        <item quantity="other">followers</item>
+        <item quantity="one">follower</item>
+    </plurals>
+    <plurals name="friends_on_clubhouse">
+        <item quantity="other">%d friends on Clubhouse</item>
+        <item quantity="one">%d friends on Clubhouse</item>
+    </plurals>
+    <plurals name="hide_blocked">
+        <item quantity="other">Hide %d blocked rooms</item>
+        <item quantity="one">Hide %d blocked room</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_days_ago">
+        <item quantity="other">%d days ago</item>
+        <item quantity="one">%d day ago</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_hours_ago">
+        <item quantity="other">%d hrs ago</item>
+        <item quantity="one">%d hr ago</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_minutes_ago">
+        <item quantity="other">%d mins ago</item>
+        <item quantity="one">%d min ago</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="num_followers">
+        <item quantity="other">%s Followers</item>
+        <item quantity="one">%s Follower</item>
+    </plurals>
+    <plurals name="num_members">
+        <item quantity="other">%s Members</item>
+        <item quantity="one">%s Member</item>
+    </plurals>
+    <plurals name="on_clubhouse_overflow">
+        <item quantity="other">%d more people you know just signed up for Clubhouse. Follow them?</item>
+        <item quantity="one">%d more person you know just signed up for Clubhouse. Follow them?</item>
+    </plurals>
+    <plurals name="show_blocked">
+        <item quantity="other">Show %d blocked rooms</item>
+        <item quantity="one">Show %d blocked room</item>
+    </plurals>
+    <plurals name="you_have_invites">
+        <item quantity="other">You have %d invites</item>
+        <item quantity="one">You have %d invite</item>
+    </plurals>
+</resources>

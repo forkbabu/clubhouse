@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?android:windowBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:animateLayoutChanges="true" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@id/back" style="@style/ClubhouseNavBackIcon" />
+        <ImageView android:layout_gravity="end" android:id="@id/menu" android:padding="@dimen/common_touchable_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_settings" android:contentDescription="@string/cd_settings" app:tint="@color/black" />
+        <ImageView android:layout_gravity="end" android:id="@id/share" android:padding="@dimen/common_touchable_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_share" android:contentDescription="@string/cd_share" />
+    </androidx.appcompat.widget.Toolbar>
+    <com.airbnb.epoxy.EpoxyRecyclerView android:id="@id/club" android:paddingBottom="@dimen/common_bottom_margin" android:layout_width="fill_parent" android:layout_height="0.0dip" app:itemSpacing="@dimen/list_item_spacing" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <FrameLayout android:id="@id/loading" android:background="@color/clubhouse_eggshell" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

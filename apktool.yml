@@ -1,0 +1,166 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: clubhouse.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- META-INF/androidx.activity_activity-ktx.version
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.appcompat_appcompat-resources.version
+- META-INF/androidx.appcompat_appcompat.version
+- META-INF/androidx.arch.core_core-runtime.version
+- META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version
+- META-INF/androidx.cardview_cardview.version
+- META-INF/androidx.coordinatorlayout_coordinatorlayout.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.cursoradapter_cursoradapter.version
+- META-INF/androidx.customview_customview.version
+- META-INF/androidx.databinding_viewbinding.version
+- META-INF/androidx.documentfile_documentfile.version
+- META-INF/androidx.drawerlayout_drawerlayout.version
+- META-INF/androidx.dynamicanimation_dynamicanimation.version
+- META-INF/androidx.emoji_emoji.version
+- META-INF/androidx.exifinterface_exifinterface.version
+- META-INF/androidx.fragment_fragment-ktx.version
+- META-INF/androidx.fragment_fragment.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.legacy_legacy-support-core-ui.version
+- META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.legacy_legacy-support-v4.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-livedata.version
+- META-INF/androidx.lifecycle_lifecycle-process.version
+- META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.lifecycle_lifecycle-service.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
+- META-INF/androidx.loader_loader.version
+- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
+- META-INF/androidx.media_media.version
+- META-INF/androidx.navigation_navigation-common-ktx.version
+- META-INF/androidx.navigation_navigation-common.version
+- META-INF/androidx.navigation_navigation-fragment-ktx.version
+- META-INF/androidx.navigation_navigation-fragment.version
+- META-INF/androidx.navigation_navigation-runtime-ktx.version
+- META-INF/androidx.navigation_navigation-runtime.version
+- META-INF/androidx.navigation_navigation-ui-ktx.version
+- META-INF/androidx.navigation_navigation-ui.version
+- META-INF/androidx.paging_paging-runtime-ktx.version
+- META-INF/androidx.paging_paging-runtime.version
+- META-INF/androidx.print_print.version
+- META-INF/androidx.recyclerview_recyclerview.version
+- META-INF/androidx.room_room-runtime.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.slidingpanelayout_slidingpanelayout.version
+- META-INF/androidx.sqlite_sqlite-framework.version
+- META-INF/androidx.sqlite_sqlite.version
+- META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
+- META-INF/androidx.tracing_tracing.version
+- META-INF/androidx.transition_transition.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/androidx.viewpager2_viewpager2.version
+- META-INF/androidx.viewpager_viewpager.version
+- META-INF/androidx.work_work-runtime-ktx.version
+- META-INF/androidx.work_work-runtime.version
+- META-INF/com.google.android.material_material.version
+- META-INF/com.google.dagger_dagger-lint-aar.version
+- META-INF/com.google.dagger_dagger.version
+- META-INF/com.google.dagger_hilt-android.version
+- META-INF/com.google.dagger_hilt-core.version
+- META-INF/services/com.fasterxml.jackson.core.JsonFactory
+- META-INF/services/d0.g.a.b.c
+- assets/PLACEHOLDER
+- assets/sentry-debug-meta.properties
+- lib/arm64-v8a/libagora-core.so
+- lib/arm64-v8a/libagora-fdkaac.so
+- lib/arm64-v8a/libagora-mpg123.so
+- lib/arm64-v8a/libagora-rtc-sdk.so
+- lib/arm64-v8a/libagora-soundtouch.so
+- lib/arm64-v8a/libagora_ai_denoise_extension.so
+- lib/arm64-v8a/libibg-native.so
+- lib/arm64-v8a/libsentry-android.so
+- lib/arm64-v8a/libsentry.so
+- lib/armeabi-v7a/libagora-core.so
+- lib/armeabi-v7a/libagora-fdkaac.so
+- lib/armeabi-v7a/libagora-mpg123.so
+- lib/armeabi-v7a/libagora-rtc-sdk.so
+- lib/armeabi-v7a/libagora-soundtouch.so
+- lib/armeabi-v7a/libagora_ai_denoise_extension.so
+- lib/armeabi-v7a/libibg-native.so
+- lib/armeabi-v7a/libsentry-android.so
+- lib/armeabi-v7a/libsentry.so
+- lib/x86/libagora-core.so
+- lib/x86/libagora-fdkaac.so
+- lib/x86/libagora-mpg123.so
+- lib/x86/libagora-rtc-sdk.so
+- lib/x86/libagora-soundtouch.so
+- lib/x86/libagora_ai_denoise_extension.so
+- lib/x86/libibg-native.so
+- lib/x86/libsentry-android.so
+- lib/x86/libsentry.so
+- lib/x86_64/libagora-core.so
+- lib/x86_64/libagora-fdkaac.so
+- lib/x86_64/libagora-mpg123.so
+- lib/x86_64/libagora-rtc-sdk.so
+- lib/x86_64/libagora-soundtouch.so
+- lib/x86_64/libagora_ai_denoise_extension.so
+- lib/x86_64/libibg-native.so
+- lib/x86_64/libsentry-android.so
+- lib/x86_64/libsentry.so
+- png
+- res/raw/a_new_lang_template.xml
+- wav
+- mp3
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '24'
+  targetSdkVersion: '30'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  LICENSE_OFL: '8'
+  LICENSE_UNICODE: '8'
+  firebase-annotations.properties: '8'
+  firebase-common.properties: '8'
+  firebase-components.properties: '8'
+  firebase-datatransport.properties: '8'
+  firebase-encoders-json.properties: '8'
+  firebase-encoders.properties: '8'
+  firebase-iid-interop.properties: '8'
+  firebase-iid.properties: '8'
+  firebase-installations-interop.properties: '8'
+  firebase-installations.properties: '8'
+  firebase-measurement-connector.properties: '8'
+  firebase-messaging.properties: '8'
+  play-services-base.properties: '8'
+  play-services-basement.properties: '8'
+  play-services-cloud-messaging.properties: '8'
+  play-services-recaptcha.properties: '8'
+  play-services-safetynet.properties: '8'
+  play-services-stats.properties: '8'
+  play-services-tasks.properties: '8'
+  transport-api.properties: '8'
+  transport-backend-cct.properties: '8'
+  transport-runtime.properties: '8'
+  version.properties: '8'
+  stamp-cert-sha256: '8'
+  okhttp3/internal/publicsuffix/NOTICE: '8'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.5.0
+versionInfo:
+  versionCode: '1890'
+  versionName: 0.1.4

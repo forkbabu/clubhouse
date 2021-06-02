@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_list_horizontal_margin" android:layout_marginTop="@dimen/hallway_list_vertical_margin" android:layout_marginRight="@dimen/common_list_horizontal_margin" android:layout_marginBottom="@dimen/hallway_list_vertical_margin" android:layout_marginHorizontal="@dimen/common_list_horizontal_margin" android:layout_marginVertical="@dimen/hallway_list_vertical_margin" app:cardBackgroundColor="@color/clubhouse_eggshell_shade" app:cardCornerRadius="@dimen/common_button_corner_radius" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.epoxy.EpoxyRecyclerView android:id="@id/hallway_events_list" android:paddingBottom="@dimen/common_touchable_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.cardview.widget.CardView>
